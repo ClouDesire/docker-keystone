@@ -1,4 +1,4 @@
-# openio/openstack-keystone Dockerfile
+# cloudesire/openstack-keystone Dockerfile
 
 This image provides an easy way to run an Openstack Keystone identity service to use along with an OpenIO SDS container.    
 It deploys and configure a simple non-replicated Openstack Keystone instance in a single Docker container and configure an object-store endpoint.
@@ -15,11 +15,11 @@ A `demo` user is created for testing purposes, in the `default` domain, with an 
 
 
 ```console
-# docker run -d openio/openstack-keystone
+# docker run -d cloudesire/openstack-keystone
 ```
 
 ```console
-# docker run -d --net=host -e IPADDR=192.168.56.102 openio/openstack-keystone
+# docker run -d --net=host -e IPADDR=192.168.56.102 cloudesire/openstack-keystone
 ```
 
 Using the Openstack CLI and your credentials, you can use this credentials Keystone (`OS_AUTH_URL` should be different):  
