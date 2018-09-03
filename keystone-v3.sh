@@ -110,7 +110,9 @@ openstack user create --password "$OS_USER_DEMO_PASSWD" --project "$OS_USER_DEMO
 openstack role add --user "$OS_USER_DEMO_USERNAME" --project "$OS_USER_DEMO_PROJECT" "$OS_USER_DEMO_ROLE"
 
 openstack user create --password superadmin --domain default superadmin
+openstack project create superadmin
 openstack role add --domain default --user superadmin admin
+openstack role add --project superadmin --user superadmin admin
 
 echo '> Starting Keystone public service ...'
 /usr/bin/keystone-wsgi-public --port 5000
